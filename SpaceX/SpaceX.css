@@ -1,0 +1,103 @@
+.item1 { grid-area: header;
+}
+.item3 { grid-area: main;
+}
+.item4 { grid-area: right;
+}
+.item5 { grid-area: footer;
+}
+.item6 { grid-area: menu;
+}
+
+
+#voedsel {
+	width:100%;max-width:550px
+}
+
+#afstand {
+	width:100%;max-width:550px
+}
+
+#brandstof {
+	width:100%;max-width:550px
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'header header header header header header'
+		'main main main main main main'
+		'right right right right right right'
+		'footer footer footer footer footer footer'
+		'menu menu menu menu menu menu';
+	grid-gap: 2px;
+	background-color: #384c56;
+}
+
+.grid-container > div {
+	background-color: #1c2021;
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+a {
+        color: white; 
+        font: 12px/12px D-DIN-Bold,Arial,Verdana,sans-serif;
+}
+
+a:hover {
+	color: #384c56;
+}
+
+.logo {
+	max-width: 150px;
+}
+.raket {
+	max-width: 500px;
+}
+
+p {
+	color: white;
+	font-size: 12px;
+	font: 12px/12px D-DIN-Bold,Arial,Verdana,sans-serif;
+}
+h2 {
+	color: white;
+	font: 20px/20px D-DIN-Bold,Arial,Verdana,sans-serif;
+}
+
+@media only screen and (min-width: 600px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+			'menu menu menu header header '
+			'menu menu menu main main'
+			'menu menu menu right right'
+			'menu menu menu footer footer';
+		grid-gap: 10px;
+		background-color: #384c56;
+	}
+	.raket {
+		max-width: 200px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+			'header header header header'
+			'main main right right'
+			'main main right right'
+			'footer footer footer footer'
+			'menu menu menu menu';
+		grid-gap: 10px;
+		background-color: #384c56;
+	}
+	.raket {
+		max-width: 400px;
+	}	
+}
